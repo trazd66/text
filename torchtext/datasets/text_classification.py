@@ -25,6 +25,8 @@ URLS = {
         'https://drive.google.com/uc?export=download&id=0Bz8a_Dbh9QhbaW12WVVZS2drcnM',
     'AmazonReviewFull':
         'https://drive.google.com/uc?export=download&id=0Bz8a_Dbh9QhbZVhsUnRWRDhETzA'
+    'FAANG_Ret_NextTD':
+    `   `'https://drive.google.com/open?id=1-7Qs0dYGxy0bIVr65iCum1PPk844Zvrl'
 }
 
 
@@ -372,6 +374,8 @@ def AmazonReviewFull(*args, **kwargs):
 
     return _setup_datasets(*(("AmazonReviewFull",) + args), **kwargs)
 
+def FAANG_Ret_NextTD(*args,**kwargs):
+    return _setup_datasets(*(("FAANG_Ret_NextTD",) + args), **kwargs)
 
 DATASETS = {
     'AG_NEWS': AG_NEWS,
@@ -382,10 +386,15 @@ DATASETS = {
     'YahooAnswers': YahooAnswers,
     'AmazonReviewPolarity': AmazonReviewPolarity,
     'AmazonReviewFull': AmazonReviewFull
+    'FAANG_Ret_NextTD' : FAANG_Ret_NextTD
 }
 
 
 LABELS = {
+    'FAANG_Ret_NextTD' : {
+        1: 'up'
+        0: 'down'
+    }
     'AG_NEWS': {1: 'World',
                 2: 'Sports',
                 3: 'Business',
